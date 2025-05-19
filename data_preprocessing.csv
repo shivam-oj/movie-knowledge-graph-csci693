@@ -1,0 +1,180 @@
+creation_time,user_email,query
+2025-05-02 02:01:05.278000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb.title_principals` where tconst = 'tt15736060' LIMIT 1000;
+2025-04-04 09:20:21.326000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.acted_in_4` AS (
+  SELECT tconst, nconst FROM `cins-570-435221.imdb_refined.imdb_mojo` AS m
+  INNER JOIN `cins-570-435221.imdb_refined.names` AS n ON m.main_actor_4 = n.primaryName
+);
+"
+2025-04-04 09:20:08.318000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.acted_in_3` AS (
+  SELECT tconst, nconst FROM `cins-570-435221.imdb_refined.imdb_mojo` AS m
+  INNER JOIN `cins-570-435221.imdb_refined.names` AS n ON m.main_actor_3 = n.primaryName
+);
+"
+2025-04-04 09:19:49.297000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.acted_in_2` AS (
+  SELECT tconst, nconst FROM `cins-570-435221.imdb_refined.imdb_mojo` AS m
+  INNER JOIN `cins-570-435221.imdb_refined.names` AS n ON m.main_actor_2 = n.primaryName
+);
+"
+2025-04-04 09:19:26.836000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.acted_in_1` AS (
+  SELECT tconst, nconst FROM `cins-570-435221.imdb_refined.imdb_mojo` AS m
+  INNER JOIN `cins-570-435221.imdb_refined.names` AS n ON m.main_actor_1 = n.primaryName
+);
+"
+2025-04-04 09:17:51.623000 UTC,shivamojay@gmail.com,"SELECT tconst, nconst FROM `cins-570-435221.imdb_refined.imdb_mojo` AS m
+INNER JOIN `cins-570-435221.imdb_refined.names` AS n ON m.main_actor_1 = n.primaryName;
+"
+2025-04-04 09:12:13.784000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.imdb_mojo` AS m
+INNER JOIN `cins-570-435221.imdb_refined.names` AS n ON m.main_actor_1 = n.primaryName;"
+2025-04-04 08:11:48.333000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.names` AS (SELECT DISTINCT nconst, primaryName FROM `cins-570-435221.imdb_refined.name_basics_refined`);
+"
+2025-04-04 08:06:22.054000 UTC,shivamojay@gmail.com,"SELECT DISTINCT (nconst, primaryName) FROM `cins-570-435221.imdb_refined.name_basics_refined`;"
+2025-04-04 08:04:38.678000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` ORDER BY nconst;
+2025-04-04 08:04:11.178000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` WHERE nconst = 'nm2406276';
+2025-04-04 08:03:50.871000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` WHERE nconst = 'nm1855577';
+2025-04-04 08:03:15.034000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` WHERE nconst = 'nm2247325';
+2025-04-04 08:02:58.139000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` WHERE nconst = 'nm1226872';
+2025-04-04 07:12:30.389000 UTC,shivamojay@gmail.com,"ALTER TABLE `cins-570-435221.imdb_refined.name_basics_refined`
+RENAME COLUMN knownForTitle TO tconst;"
+2025-04-04 07:09:12.244000 UTC,shivamojay@gmail.com,"SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.name_basics_refined`
+WHERE knownForTitle NOT IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);
+"
+2025-04-04 07:05:10.329000 UTC,shivamojay@gmail.com,"SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew_director`
+WHERE tconst NOT IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);"
+2025-04-04 07:04:57.096000 UTC,shivamojay@gmail.com,"SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew_writer`
+WHERE tconst NOT IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);"
+2025-04-03 02:40:18.919000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` ORDER BY nconst LIMIT 100
+2025-04-03 02:40:18.479000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` WHERE nconst = 'nm2406276'
+2025-04-03 02:40:18.390000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` WHERE nconst = 'nm2406276';
+
+SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` ORDER BY nconst LIMIT 100;
+"
+2025-04-03 02:37:16.148000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` WHERE nconst = 'nm2406276';
+"
+2025-04-03 02:35:55.970000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` WHERE nconst = 'nm2247325';
+"
+2025-04-03 02:30:19.469000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` WHERE nconst = 'nm1226872';
+2025-04-03 02:25:48.627000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.title_crew_writers` WHERE tconst = 'tt2404435';
+"
+2025-04-03 02:25:06.901000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.title_crew_writer` WHERE tconst = 'tt2404435';
+2025-04-03 02:24:40.374000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.title_crew_writers` WHERE tconst = 'tt2404435';
+2025-02-28 05:58:31.327000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` ORDER BY nconst LIMIT 50;
+2025-02-28 05:55:26.076000 UTC,shivamojay@gmail.com,"DELETE FROM `cins-570-435221.imdb_refined.name_basics_refined`
+WHERE nconst NOT IN (SELECT director FROM `cins-570-435221.imdb_refined.title_crew_director`)
+AND nconst NOT IN (SELECT writer FROM `cins-570-435221.imdb_refined.title_crew_writer`)
+AND knownForTitle NOT IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);
+"
+2025-02-28 05:53:52.161000 UTC,shivamojay@gmail.com,"SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.name_basics_refined`
+WHERE nconst NOT IN (SELECT director FROM `cins-570-435221.imdb_refined.title_crew_director`)
+AND nconst NOT IN (SELECT writer FROM `cins-570-435221.imdb_refined.title_crew_writer`)
+AND knownForTitle NOT IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);
+"
+2025-02-28 05:52:54.956000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined`
+WHERE nconst NOT IN (SELECT director FROM `cins-570-435221.imdb_refined.title_crew_director`)
+AND nconst NOT IN (SELECT writer FROM `cins-570-435221.imdb_refined.title_crew_writer`)
+AND knownForTitle NOT IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);
+"
+2025-02-28 05:48:50.749000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined`
+WHERE nconst NOT IN (SELECT director FROM `cins-570-435221.imdb_refined.title_crew_director`)
+AND nconst NOT IN (SELECT writer FROM `cins-570-435221.imdb_refined.title_crew_writer`);
+"
+2025-02-28 05:36:15.003000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` AS nm
+LEFT JOIN `cins-570-435221.imdb_refined.title_crew_director` AS dir
+ON nm.nconst = dir.director
+WHERE director IS NOT NULL
+ORDER BY nconst
+LIMIT 20;"
+2025-02-28 05:35:20.959000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` AS nm
+LEFT JOIN `cins-570-435221.imdb_refined.title_crew_director` AS dir
+ON nm.nconst = dir.director
+ORDER BY nconst
+LIMIT 20;"
+2025-02-28 05:34:47.584000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` AS nm
+LEFT JOIN `cins-570-435221.imdb_refined.title_crew_director` AS dir
+ON nm.nconst = dir.director LIMIT 20;"
+2025-02-28 05:29:15.316000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.title_crew_director` AS
+SELECT
+    *
+FROM `cins-570-435221.imdb_refined.title_crew_directors`,
+UNNEST(SPLIT(directors, ',')) AS director;
+"
+2025-02-28 05:28:27.415000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.title_crew_writer` AS
+SELECT
+    *
+FROM `cins-570-435221.imdb_refined.title_crew_writers`,
+UNNEST(SPLIT(writers, ',')) AS writer;
+"
+2025-02-28 05:25:57.969000 UTC,shivamojay@gmail.com,"-- SELECT  FROM `cins-570-435221.imdb_refined.title_crew_writers` LIMIT 1000
+
+
+SELECT 
+    *
+FROM `cins-570-435221.imdb_refined.title_crew_writers`,
+UNNEST(SPLIT(writers, ',')) AS writer;
+"
+2025-02-28 05:17:39.788000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined`
+ORDER BY nconst;
+"
+2025-02-28 05:17:05.545000 UTC,shivamojay@gmail.com,"DELETE FROM `cins-570-435221.imdb_refined.name_basics_refined`
+WHERE nconst = 'nconst';
+"
+2025-02-28 05:06:04.331000 UTC,shivamojay@gmail.com,SELECT * FROM `cins-570-435221.imdb_refined.name_basics_refined` ORDER BY nconst LIMIT 100;
+2025-02-28 05:04:30.192000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.name_basics_refined` AS
+SELECT
+    *
+FROM `cins-570-435221.imdb_refined.name_basics`,
+UNNEST(SPLIT(knownForTitles, ',')) AS knownForTitle;
+"
+2025-02-28 05:01:44.882000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.title_crew_directors`
+WHERE directors = ""\\N"";"
+2025-02-28 05:01:10.603000 UTC,shivamojay@gmail.com,"DELETE FROM `cins-570-435221.imdb_refined.title_crew_writers`
+WHERE writers = ""\\N"";"
+2025-02-28 05:00:51.068000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb_refined.title_crew_writers`
+WHERE writers = ""\\N"";"
+2025-02-28 04:54:33.880000 UTC,shivamojay@gmail.com,"SELECT
+    COUNT(*)
+FROM `cins-570-435221.imdb_refined.name_basics`,
+UNNEST(SPLIT(knownForTitles, ',')) AS knownForTitle LIMIT 50;
+"
+2025-02-28 04:53:54.140000 UTC,shivamojay@gmail.com,"SELECT
+    *
+FROM `cins-570-435221.imdb_refined.name_basics`,
+UNNEST(SPLIT(knownForTitles, ',')) AS knownForTitle LIMIT 50;
+"
+2025-02-28 04:47:58.507000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.title_crew_writers` AS
+SELECT tconst, writers FROM `cins-570-435221.imdb_refined.title_crew`;
+"
+2025-02-28 04:47:29.274000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.title_crew_directors` AS
+SELECT tconst, directors FROM `cins-570-435221.imdb_refined.title_crew`;
+"
+2025-02-27 05:57:54.416000 UTC,shivamojay@gmail.com,SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE tconst IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);
+2025-02-27 05:57:44.130000 UTC,shivamojay@gmail.com,SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE tconst NOT IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);
+2025-02-27 05:52:26.051000 UTC,shivamojay@gmail.com,DELETE FROM `cins-570-435221.imdb_refined.title_crew` WHERE tconst NOT IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);
+2025-02-27 05:49:46.395000 UTC,shivamojay@gmail.com,SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE tconst NOT IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);
+2025-02-27 05:42:13.086000 UTC,shivamojay@gmail.com,SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE tconst IN (SELECT tconst FROM `cins-570-435221.imdb_refined.imdb_mojo`);
+2025-02-27 05:33:46.978000 UTC,shivamojay@gmail.com,"DELETE FROM `cins-570-435221.imdb_refined.title_crew` WHERE directors = ""\\N"" AND writers = ""\\N"";"
+2025-02-27 05:33:07.263000 UTC,shivamojay@gmail.com,"SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE directors = ""\\N"" AND writers = ""\\N"";"
+2025-02-27 05:32:54.709000 UTC,shivamojay@gmail.com,"SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE directors = ""\N"" AND writers = ""\N"";"
+2025-02-27 05:32:42.394000 UTC,shivamojay@gmail.com,SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE directors = '\N' AND writers = '\N';
+2025-02-27 05:32:21.441000 UTC,shivamojay@gmail.com,SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE directors = '\n' AND writers = '\n';
+2025-02-27 05:31:44.419000 UTC,shivamojay@gmail.com,SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE directors IS NULL AND writers IS NULL;
+2025-02-27 05:31:33.613000 UTC,shivamojay@gmail.com,SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_crew` WHERE directors = NULL AND writers = NULL;
+2025-02-27 05:30:00.900000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.title_crew` AS
+SELECT * FROM `cins-570-435221.imdb.title_crew`;
+"
+2025-02-27 05:18:10.229000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.imdb_mojo` AS
+SELECT * FROM `cins-570-435221.imdb_refined.title_basics` AS tb INNER JOIN `cins-570-435221.imdb_refined.box_office_mojo_refined` AS bm ON tb.tconst = bm.movie_id;
+"
+2025-02-27 04:56:50.980000 UTC,shivamojay@gmail.com,"SELECT COUNT(*) FROM `cins-570-435221.imdb_refined.title_basics` AS tb INNER JOIN `cins-570-435221.imdb_refined.box_office_mojo_refined` AS bm
+ON tb.tconst = bm.movie_id;"
+2025-02-27 04:54:14.250000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.box_office_mojo_refined` AS
+SELECT * FROM `cins-570-435221.imdb_refined.box_office_mojo`;
+"
+2025-02-27 04:45:01.919000 UTC,shivamojay@gmail.com,"DELETE FROM `cins-570-435221.imdb_refined.title_basics` WHERE titleType <> ""movie"";"
+2025-02-27 04:43:04.737000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.title_basics` AS
+SELECT * FROM `cins-570-435221.imdb.title_basics`;
+"
+2025-02-27 04:41:18.133000 UTC,shivamojay@gmail.com,"SELECT * FROM `cins-570-435221.imdb.title_crew` WHERE tconst = ""tt31494743"";"
+2025-02-27 04:36:26.490000 UTC,shivamojay@gmail.com,"SELECT COUNT(*) FROM `cins-570-435221.imdb.title_basics` WHERE titleType = ""movie"";"
+2025-02-27 04:27:21.384000 UTC,shivamojay@gmail.com,"CREATE TABLE `cins-570-435221.imdb_refined.name_basics` AS
+SELECT * FROM `cins-570-435221.imdb.name_basics`;
+"
